@@ -1,5 +1,5 @@
 import "./App.css";
-import { useState, useMemo, useCallback } from "react";
+import { useState, useMemo, useCallback, useEffect } from "react";
 import Dummy from "./component/Dummy";
 
 function App() {
@@ -24,6 +24,10 @@ function App() {
     return () => {
       alert("HI");
     };
+  }, []);
+
+  useEffect(() => {
+    console.log("HI");
   }, []);
 
   return (
